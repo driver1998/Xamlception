@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Xamlception": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

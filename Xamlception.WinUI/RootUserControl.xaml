@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="Xamlception.WinUI.RootUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xamlception.WinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="navigationView" IsSettingsVisible="False" ItemInvoked="navigationView_ItemInvoked" IsBackButtonVisible="Collapsed" PaneDisplayMode="Top">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home" Tag="Xamlception.WinUI.SamplePage" Icon="Home"/>
+            <NavigationViewItem Content="Colors" Tag="Xamlception.WinUI.ColorsPage">
+                <NavigationViewItem.Icon>
+                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE790;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </NavigationView.MenuItems>
+        <ScrollViewer Padding="12,12,12,12">
+            <Frame x:Name="rootFrame"/>
+        </ScrollViewer>
+    </NavigationView>
+</UserControl>
